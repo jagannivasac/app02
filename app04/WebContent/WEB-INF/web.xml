@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>context application</display-name>
+  <context-param>
+ <param-name>driver_name</param-name> 
+  <param-value>oracle.jdbc.OracleDriver</param-value>
+  </context-param>
+ <context-param>
+<param-name>driver_url</param-name> 
+  <param-value>jdbc:oracale:@localhost:1521:xe</param-value>
+  </context-param>
+  <context-param>
+<param-name>db_user</param-name> 
+  <param-value>system</param-value>
+  </context-param>
+  <context-param>
+<param-name>db_password</param-name> 
+  <param-value>sys</param-value>
+  </context-param>
+  <servlet>
+    <description></description>
+    <display-name>ContextServlet</display-name>
+    <servlet-name>ContextServlet</servlet-name>
+    <servlet-class>com.durgasoft.servlet.ContextServlet</servlet-class>
+    <init-param>
+      <description></description>
+      <param-name>config_var1</param-name>
+      <param-value>ServletConfig</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContextServlet</servlet-name>
+    <url-pattern>/Context</url-pattern>
+  </servlet-mapping>
+</web-app>
